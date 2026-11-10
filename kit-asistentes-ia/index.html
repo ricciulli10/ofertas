@@ -3,67 +3,110 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex">
-<title>Oferta especial: Kit de 20 Asistentes de IA</title>
-<meta name="description" content="Oferta única para quienes acaban de comprar los 200 Prompts de IA: convierte tus prompts en 20 asistentes que trabajan por tu negocio.">
+<title>Kit de 20 Asistentes de IA para tu Negocio + Bono 200 Prompts</title>
+<meta name="description" content="Automatiza ventas, marketing, atención al cliente y finanzas en tu negocio con 20 asistentes de IA listos para usar en ChatGPT, Claude o Gemini.">
+<meta property="og:title" content="Kit de 20 Asistentes de IA para tu Negocio + Bono 200 Prompts">
+<meta property="og:description" content="20 Asistentes de Inteligencia Artificial listos para copiar y pegar. Ahorra horas de trabajo cada día.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-<div class="bar">⚠️ Espera, tu pedido aún no está completo. No cierres esta página.</div>
-<main class="wrap">
-  <div class="steps"><span class="done">✔ 1. Compra confirmada</span><span class="now">2. Oferta especial</span><span>3. Acceso</span></div>
+<!-- Upsell dynamic bar: only shown if ?upsell=1 is in URL -->
+<div id="upsell-bar" class="bar" style="display:none">⚠️ Espera, tu pedido aún no está completo. No cierres esta página.</div>
 
-  <h1>Ya tienes los 200 prompts. Ahora conviértelos en <span style="color:var(--accent)">20 asistentes de IA</span> que trabajan por ti.</h1>
-  <p class="lead">Los prompts te ayudan a hacer una tarea a la vez. Un asistente se configura una vez y queda listo para usarse todos los días, en ChatGPT, Claude o Gemini, sin saber programar.</p>
+<main class="wrap">
+  <div id="upsell-steps" class="steps" style="display:none">
+    <span class="done">✔ 1. Compra confirmada</span><span class="now">2. Oferta especial</span><span>3. Acceso</span>
+  </div>
+
+  <div style="margin-top:24px">
+    <span class="badge">Inteligencia Artificial para Negocios</span>
+  </div>
+
+  <h1 id="hero-title">Multiplica tu Productividad: <span style="color:var(--accent)">20 Asistentes de IA</span> que Trabajan por Tu Negocio</h1>
+  
+  <p class="lead" id="hero-lead">Un prompt te ayuda a hacer una sola tarea a la vez. Un <strong>asistente de IA</strong> se configura una sola vez y queda listo para usarse todos los días en ChatGPT, Claude o Gemini, sin saber nada de programación.</p>
 
   <div class="card cta">
-    <p style="margin:0 0 4px;font-weight:700">Oferta solo para esta página</p>
-    <p class="small" style="margin:0">Se agrega a tu compra con un clic, sin volver a escribir los datos de tu tarjeta.</p>
+    <p style="margin:0 0 4px;font-weight:700;font-size:18px">Acceso Inmediato al Kit + Bono de 200 Prompts</p>
+    <p class="small" style="margin:0 0 16px">Configuración lista para copiar y pegar en menos de 2 minutos.</p>
+
+    <!-- Hotmart Widget slot (if loaded in funnel) -->
     <div id="hotmart-sales-funnel"></div>
-    <span class="fallback small">¿No ves el botón? <a href="https://pay.hotmart.com/L108281444J">Compra el Kit aquí</a></span>
+
+    <div class="btn-group">
+      <a class="btn" href="https://pay.hotmart.com/L108281444J">Comprar en Hotmart (Latam / COP)</a>
+      <a class="btn btn-secondary" href="https://ricciulli8.gumroad.com/l/rhbbl">Comprar en Gumroad ($29 USD / PayPal)</a>
+    </div>
+    <p class="small" style="margin:4px 0 0;text-align:center">Descarga inmediata de archivos .txt y guías PDF · Garantía de 7 días</p>
   </div>
 
-  <h2>Tus 20 asistentes, listos para copiar y pegar</h2>
+  <h2>Tus 20 Asistentes, listos para copiar y pegar</h2>
   <div class="grid">
-    <div class="tile"><b>💬 Ventas</b>Asesor de ventas por WhatsApp, generador de propuestas y entrenador de objeciones.</div>
-    <div class="tile"><b>📣 Marketing</b>Community manager, copywriter de anuncios y estratega de marketing.</div>
-    <div class="tile"><b>🤝 Servicio</b>Atención al cliente, gestor de reseñas y asistente de reservas.</div>
-    <div class="tile"><b>💰 Finanzas</b>Asesor financiero, cobrador amable y analista de Excel.</div>
-    <div class="tile"><b>⚙️ Equipo</b>Reclutador, creador de procesos y asistente de productividad.</div>
-    <div class="tile"><b>✍️ Contenido</b>Redactor SEO, guionista de videos, email marketer, mentor y validador de ideas.</div>
+    <div class="tile"><b>💬 Ventas</b>Asesor de ventas por WhatsApp, generador de propuestas comerciales y entrenador de objeciones.</div>
+    <div class="tile"><b>📣 Marketing</b>Community manager, copywriter de anuncios persuasivos y estratega de contenido.</div>
+    <div class="tile"><b>🤝 Servicio al Cliente</b>Atención 24/7, gestor amable de reseñas y asistente para agendamiento de citas.</div>
+    <div class="tile"><b>💰 Finanzas</b>Asesor financiero para pymes, cobrador amable de facturas y analista de reportes.</div>
+    <div class="tile"><b>⚙️ Productividad</b>Reclutador, creador de manuales de procesos y organizador de tareas diarias.</div>
+    <div class="tile"><b>✍️ Redacción & Contenido</b>Redactor SEO para blogs, guionista para videos verticales (TikTok/Reels) y validador de ideas.</div>
   </div>
 
-  <h2>Qué recibes</h2>
+  <h2>¿Qué recibes exactamente?</h2>
   <div class="card">
     <ul class="check">
-      <li>Guía en PDF paso a paso para crear cada asistente en ChatGPT (GPTs), Claude (Proyectos) y Gemini (Gems)</li>
-      <li>Archivos .txt de los 20 asistentes con instrucciones profesionales: solo completas los datos de tu negocio</li>
-      <li>Capítulo para llevar tu asistente a WhatsApp o a tu página web</li>
-      <li>Plantilla para crear tus propios asistentes desde cero</li>
-      <li>Todo en español, con descarga inmediata</li>
+      <li><strong>Archivos .TXT de los 20 asistentes:</strong> Instrucciones profesionales probadas. Solo completas el nombre de tu negocio y listo.</li>
+      <li><strong>Guía en PDF paso a paso:</strong> Cómo activar cada asistente en ChatGPT (Custom GPTs), Claude (Proyectos) y Gemini (Gems).</li>
+      <li><strong>Capítulo especial:</strong> Cómo conectar tu asistente a WhatsApp Business o a tu página web sin programar.</li>
+      <li><strong>🎁 BONO GRATIS:</strong> Paquete de <strong>200 Prompts Maestros</strong> categorizados para negocio, ventas y productividad.</li>
+      <li><strong>Plantilla en blanco:</strong> Estructura para crear tus propios asistentes desde cero.</li>
+      <li>Todo 100% en español y con acceso de por vida.</li>
     </ul>
   </div>
 
-  <h2>¿Por qué ahora?</h2>
-  <p>Con los prompts ya sabes <em>qué</em> pedirle a la IA. El Kit te da el siguiente paso: dejar cada tarea configurada para que no tengas que empezar de cero cada vez. Atender clientes, escribir anuncios o cobrar facturas pasa a ser cuestión de abrir tu asistente y pegar el mensaje.</p>
+  <h2>¿Por qué implementar esto ahora?</h2>
+  <p>Con los prompts comunes tienes que volver a explicarle a la IA quién eres y qué vendes cada vez que abres el chat. Con este Kit, creas tus propios <strong>asistentes permanentes</strong>: atienden clientes, escriben tus correos y redactan anuncios conociendo a tu cliente ideal desde el primer segundo.</p>
 
   <div class="card cta">
-    <p style="margin:0;font-weight:700">Agrégalo a tu pedido</p>
-    <p class="small" style="margin:0">Garantía de 7 días: si no te sirve, pides el reembolso desde Hotmart.</p>
-    <a class="btn" href="#hotmart-sales-funnel" onclick="document.getElementById('hotmart-sales-funnel').scrollIntoView({behavior:'smooth'});return false;">Ver la oferta ↑</a>
+    <div class="price">
+      Comienza a delegar hoy en tu equipo de IA
+      <strong>Acceso Completo con Bono Incluido</strong>
+    </div>
+
+    <div class="btn-group">
+      <a class="btn" href="https://pay.hotmart.com/L108281444J">Comprar en Hotmart (Latam / COP)</a>
+      <a class="btn btn-secondary" href="https://ricciulli8.gumroad.com/l/rhbbl">Comprar en Gumroad ($29 USD / PayPal)</a>
+    </div>
+    <p class="small" style="margin:4px 0 0;text-align:center">Garantía incondicional de 7 días: si no ahorras tiempo, pides tu reembolso sin preguntas.</p>
   </div>
 
-  <p class="small">Nota: algunas funciones, como crear GPTs personalizados, dependen del plan que tengas en cada herramienta de IA.</p>
+  <p class="small">Nota: las funciones de asistentes personalizados (Custom GPTs o Projects) están disponibles en las interfaces de ChatGPT, Claude o Gemini.</p>
 </main>
-<footer class="wrap">Pago procesado de forma segura por Hotmart.</footer>
+
+<footer class="wrap">
+  <p><a href="../" style="color:inherit">Volver al catálogo de ofertas</a> · <a href="../presupuesto-personal/" style="color:inherit">Plantilla Excel de Presupuesto</a></p>
+  Pagos procesados de forma 100% segura por Hotmart y Gumroad con cifrado SSL.
+</footer>
+
+<!-- Dynamic Upsell mode logic -->
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('upsell') === '1') {
+    document.getElementById('upsell-bar').style.display = 'block';
+    document.getElementById('upsell-steps').style.display = 'flex';
+    document.getElementById('hero-title').innerHTML = 'Ya tienes los 200 prompts. Ahora conviértelos en <span style="color:var(--accent)">20 asistentes de IA</span> que trabajan por ti.';
+    document.getElementById('hero-lead').innerText = 'Los prompts te ayudan a hacer una tarea a la vez. Un asistente se configura una vez y queda listo para usarse todos los días, en ChatGPT, Claude o Gemini, sin saber programar.';
+  }
+</script>
 
 <!-- HOTMART - Sales Funnel Widget -->
 <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
 <script>
-checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+try {
+  checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+} catch (e) {
+  // Widget optional in standalone view
+}
 </script>
-<!-- HOTMART - Sales Funnel Widget -->
 </body>
 </html>
